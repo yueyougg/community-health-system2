@@ -1,0 +1,99 @@
+:root {
+  --bg: #f5f7fa;
+  --card: #ffffff;
+  --line: #ebeef5;
+  --text: #303133;
+  --primary: #409eff;
+  --shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
+  --header-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+.page-card {
+  background: var(--card);
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,0.15);
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.chart {
+  width: 100%;
+  height: 350px;
+}
+
+/* 动画效果 */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 页面切换动画 */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* 覆盖 Element Plus 表格背景色 */
+.el-table {
+  --el-table-border-color: #f0f0f0;
+  --el-table-header-bg-color: #fafafa;
+}
+
+.el-table th.el-table__cell {
+  font-weight: 600;
+  color: #606266;
+}
+
+/* 侧边栏样式 */
+.aside {
+  background-color: #ffffff;
+  border-right: 1px solid #e6e6e6;
+}
+
+.sidebar-menu {
+  border-right: none !important;
+}
+
+.sidebar-menu .el-menu-item.is-active {
+  background-color: #ecf5ff;
+  border-right: 3px solid var(--primary);
+}

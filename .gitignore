@@ -1,0 +1,32 @@
+# ===== IDE =====
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# ===== Backend (Java/Maven) =====
+backend/target/
+backend/*.log
+backend/*.err
+*.class
+*.jar
+*.war
+
+# ===== Frontend (Node/Vite) =====
+frontend/node_modules/
+frontend/dist/
+
+# ===== Database Backups =====
+backups/*.sql
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ===== Environment / Secrets (如果需要示例文件可保留) =====
+# 关键：不要把 application-production.yml 之类提交上去
+# 只保留 application-example.yml 作为模板

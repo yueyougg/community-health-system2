@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/community_health?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    time-zone: Asia/Shanghai
+    date-format: yyyy-MM-dd HH:mm:ss
+
+jwt:
+  secret: community-health-archive-system-secret-key-2026
+  expiration-ms: 1209600000 # 14 days (14 * 24 * 60 * 60 * 1000)
+
+logging:
+  level:
+    org.springframework.security: INFO
+
+backup:
+  directory: ./backups
+  auto:
+    enabled: true  # 是否启用自动备份
+
+ai:
+  api-url: https://open.bigmodel.cn/api/paas/v4/chat/completions
+  api-key: "……" # 请在此处填入有效的 OpenAI API Key 或者是其他兼容平台的 Key
+  model: glm-4-flash

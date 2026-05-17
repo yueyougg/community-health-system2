@@ -1,0 +1,25 @@
+package com.community.health.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
+@Table(name = "medical_history_genetic_records")
+public class MedicalHistoryGeneticRecord extends BaseEntity {
+
+    @Column(nullable = false)
+    private Long medicalHistoryId;
+
+    @Column(nullable = false, length = 80)
+    private String diseaseName;
+
+    @Column(nullable = false, length = 80)
+    private String relationToResident;
+}
