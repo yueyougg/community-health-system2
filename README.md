@@ -1,6 +1,5 @@
 # 社区健康档案管理系统（Spring Boot + Vue3 + MySQL）
 
-基于图片《社区健康档案管理系统需求说明书》生成的完整项目模板，包含：
 
 - 后端：`Spring Boot 3 + Spring Security + JWT + JPA`
 - 前端：`Vue3 + Vite + Pinia + Vue Router + Element Plus + ECharts`
